@@ -1,11 +1,16 @@
 <?php 
 
-require_once '../vendor/autoload.php';
+// API WANKUL -> https://wankul.fr/apps/proxy/api/wankuldex/cards
 
-$faker = Faker\Factory::create();
+require '../vendor/autoload.php';
 
-echo $faker->name();
-echo "<br>";
-echo $faker->email();
+$client = new GuzzleHttp\Client();
+$res = $client->request('GET', 'https://wankul.fr/apps/proxy/api/wankuldex/cards');
+echo $res->getStatusCode();
+// "200"
+echo "<br/>";
+// echo $res->getBody();
+$cards = json_decode($res->getBody());
+print_r($cards[0]);
 
 ?>
