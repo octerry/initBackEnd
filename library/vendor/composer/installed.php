@@ -3,7 +3,7 @@
         'name' => 'octerry/library',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '36a6b52bb88d107b9e081218f33f244476946d68',
+        'reference' => '5c8a5b26d53a042213f196d3c07858837dea0a2f',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -49,7 +49,7 @@
         'octerry/library' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '36a6b52bb88d107b9e081218f33f244476946d68',
+            'reference' => '5c8a5b26d53a042213f196d3c07858837dea0a2f',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

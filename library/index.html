@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meteo Actuelle</title>
 </head>
 <body>
-<h1>Météo Actuelle</h1>
-<input type="text" id="city" placeholder="Entrez une ville" /> <button id="getWeather">Voir la météo</button>
-<div id="weather"></div>
+    <h1>Météo Actuelle</h1>
+    <input type="text" id="city" placeholder="Entrez une ville" /> <button id="getWeather">Voir la météo</button>
+    <div id="weather"></div>
     <script>
         document.getElementById('getWeather').addEventListener('click', () => {
             const city = document.getElementById('city').value || 'Nice';
@@ -19,12 +19,13 @@
                     if (!response.ok) {
                         throw new Error('Erreur réseau ou API');
                     }
-                    console.log(response)
                     return response.json(); // Convertir la réponse JSON
+                    console.log(response);
                 })
                 .then(data => {
                     // Afficher les informations météo
-                    const weatherDiv = document.getElementById('weather'); weatherDiv.innerHTML = `
+                    const weatherDiv = document.getElementById('weather'); weatherDiv.innerHTML = 
+                    `
                     <p><strong>Ville :</strong> ${data.name}</p>
                     <p><strong>Météo :</strong> ${data.weather[0].description}</p>
                     <p><strong>Température :</strong> ${data.main.temp}°C</p>
